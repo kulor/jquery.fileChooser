@@ -82,10 +82,9 @@
             if (!acceptVal) {
                 return [];
             }
-            return acceptVal.split(',')
-                .map(function (acceptFileType) {
-                    return acceptFileType.replace(/.*\/([a-zA-Z0-9]*)/, '$1');
-                });
+            return $.map(acceptVal.split(','), function (acceptFileType) {
+                return acceptFileType.replace(/.*\/([a-zA-Z0-9]*)/, '$1');
+            });
         };
 
         /**
